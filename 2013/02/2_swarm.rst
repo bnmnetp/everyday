@@ -137,7 +137,7 @@ construction.  Where the new heading for ``swarm[i]`` is in ``newhead[i]``.
 With the initial implementation out of the way, lets look at a much nicer and
 cleaner version that illustrates some nice Object Oriented Programming
 techniques.  If you are not so familiar with writing classes in Python you may
-want to take time to read `about classes <http://interactivepython.org/courselib/static/thinkcspy/Classes/classesintro.html>`_ and `inheritance <http://interactivepython.org/courselib/static/pythonds/Introduction/introduction.html#inheritance-logic-gates-and-circuits>`_.
+want to take time to read `about classes <http://interactivepython.org/runestone/static/thinkcspy/Classes/classesintro.html>`_ and `inheritance <http://interactivepython.org/runestone/static/pythonds/Introduction/introduction.html#inheritance-logic-gates-and-circuits>`_.
 
 
 
@@ -325,9 +325,9 @@ and enjoy the behavior of the sardines in a completely new light.
 Links
 ~~~~~
 
-* `About classes <http://interactivepython.org/courselib/static/thinkcspy/Classes/classesintro.html>`_
+* `About classes <http://interactivepython.org/runestone/static/thinkcspy/Classes/classesintro.html>`_
 
-* `Inheritance <http://interactivepython.org/courselib/static/pythonds/Introduction/introduction.html#inheritance-logic-gates-and-circuits>`_
+* `Inheritance <http://interactivepython.org/runestone/static/pythonds/Introduction/introduction.html#inheritance-logic-gates-and-circuits>`_
 
 * Boids_
 

@@ -73,12 +73,12 @@ installment, and start in on a password generator this is a bit more fun.
 
 If you are brand new to Python and/or programming, here are some links that can give you some background:
 
-* `The for statement <http://interactivepython.org/courselib/static/thinkcspy/PythonTurtle/helloturtle.html#the-for-loop>`_
+* `The for statement <http://interactivepython.org/runestone/static/thinkcspy/PythonTurtle/helloturtle.html#the-for-loop>`_
 * `The accumulator pattern
-  <http://interactivepython.org/courselib/static/thinkcspy/SimplePythonData/simpledata.html#updating-variables>`_
+  <http://interactivepython.org/runestone/static/thinkcspy/SimplePythonData/simpledata.html#updating-variables>`_
 * `Generating random numbers
-  <http://interactivepython.org/courselib/static/thinkcspy/PythonModules/modules.html#the-random-module>`_
-* `Strings <http://interactivepython.org/courselib/static/thinkcspy/Strings/strings.html>`_
+  <http://interactivepython.org/runestone/static/thinkcspy/PythonModules/modules.html#the-random-module>`_
+* `Strings <http://interactivepython.org/runestone/static/thinkcspy/Strings/strings.html>`_
 
 
 .. index:: string, random, slice, password

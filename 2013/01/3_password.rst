@@ -86,7 +86,7 @@ to replace the lower case character with its upper case counter part.
 
 Now there are many other ways to code this program.  If you know about ``if
 statements`` (`read here
-<http://interactivepython.org/courselib/static/thinkcspy/Selection/selection.html>`_)
+<http://interactivepython.org/runestone/static/thinkcspy/Selection/selection.html>`_)
 or would like to learn about if statements this can be written in a completely
 different way.  For example you might use one or more variables to remember
 whether you have used a number or a capital letter.  Or you might write some code
@@ -94,7 +94,7 @@ to determine whether the password has a capital letter or a number in it.
 
 Before we move on, I want to give you one more example of how to write this
 program that combines `lists
-<http://interactivepython.org/courselib/static/thinkcspy/Lists/lists.html>`_, with
+<http://interactivepython.org/runestone/static/thinkcspy/Lists/lists.html>`_, with
 another important string method.  Very often 
 you will find yourself wanting to shift back and forth between lists of things and
 strings.  In particular in this example we will use the ``join`` method to

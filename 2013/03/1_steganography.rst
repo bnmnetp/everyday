@@ -7,7 +7,7 @@ I have just come home from the 2013 SIGCSE conferece.  The Special Interest Grou
 
     <img src="../../_static/secret.png" id="secret.png">
 
-This reminded me of a topic that I have wanted to write about for a while now, **Stegnography.**  Take another look at the image of the enigma machine. Look really carefully.  Do you see anything amiss?  Can you find the phrase 'Python Rocks' anywhere in the image?  If you are not familiar with basic image processing check out this section `on image processing <http://interactivepython.org/courselib/static/thinkcspy/MoreAboutIteration/moreiteration.html#dimensional-iteration-image-processing>`_  Its going to come in handy later in this post.
+This reminded me of a topic that I have wanted to write about for a while now, **Stegnography.**  Take another look at the image of the enigma machine. Look really carefully.  Do you see anything amiss?  Can you find the phrase 'Python Rocks' anywhere in the image?  If you are not familiar with basic image processing check out this section `on image processing <http://interactivepython.org/runestone/static/thinkcspy/MoreAboutIteration/moreiteration.html#dimensional-iteration-image-processing>`_  Its going to come in handy later in this post.
 
 .. actex:: imagefun1
 
@@ -65,7 +65,7 @@ The algorithm to extract the message is easy.  We iterate over every pixel in ou
    win.exitonclick()
 
 
-Hopefully you got the message.  Now, there are a few caveats to think about with this.  program, in fact if you have python running on your own computer try the following experiment.  Save the original secret image by right clicking and choosing save image as.   Save it as a 'jpg' file instead of a png file.  Now download and run the decode software on your own computer.  If you haven't been through the `image processing section <http://interactivepython.org/courselib/static/thinkcspy/MoreAboutIteration/moreiteration.html#dimensional-iteration-image-processing>`_  then you'll need to go back there and follow the instructions for downloading the ``cImage`` module.  Although thats going to be a bit of work for an experiment that will fail dramatically.  If you convert the image to jpg as I've suggested and run the decode program you'll end up with an image that looks something like this:
+Hopefully you got the message.  Now, there are a few caveats to think about with this.  program, in fact if you have python running on your own computer try the following experiment.  Save the original secret image by right clicking and choosing save image as.   Save it as a 'jpg' file instead of a png file.  Now download and run the decode software on your own computer.  If you haven't been through the `image processing section <http://interactivepython.org/runestone/static/thinkcspy/MoreAboutIteration/moreiteration.html#dimensional-iteration-image-processing>`_  then you'll need to go back there and follow the instructions for downloading the ``cImage`` module.  Although thats going to be a bit of work for an experiment that will fail dramatically.  If you convert the image to jpg as I've suggested and run the decode program you'll end up with an image that looks something like this:
 
 .. figure:: lossy_secret.png
    :align: center

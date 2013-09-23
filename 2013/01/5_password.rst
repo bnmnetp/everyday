@@ -59,7 +59,7 @@ a pair of letters might alternate left-right or right-left.
 
 Now, you can play around with the example above, and modify it to use different
 words, but this is really a case where a `function
-<http://interactivepython.org/courselib/static/thinkcspy/Functions/functions.html>`_
+<http://interactivepython.org/runestone/static/thinkcspy/Functions/functions.html>`_
 is called for.
 
 
@@ -5189,12 +5189,12 @@ for January.  I'll be back next month with more fun problems.
 Summary of Background Reading
 -----------------------------
 
-* `The while loop <http://interactivepython.org/courselib/static/thinkcspy/MoreAboutIteration/moreiteration.html>`_
+* `The while loop <http://interactivepython.org/runestone/static/thinkcspy/MoreAboutIteration/moreiteration.html>`_
 * `The accumulator pattern
-  <http://interactivepython.org/courselib/static/thinkcspy/SimplePythonData/simpledata.html#updating-variables>`_
+  <http://interactivepython.org/runestone/static/thinkcspy/SimplePythonData/simpledata.html#updating-variables>`_
 * `Generating random numbers
-  <http://interactivepython.org/courselib/static/thinkcspy/PythonModules/modules.html#the-random-module>`_
+  <http://interactivepython.org/runestone/static/thinkcspy/PythonModules/modules.html#the-random-module>`_
 * `Strings
-  <http://interactivepython.org/courselib/static/thinkcspy/Strings/strings.html>`_
-* `Files <http://interactivepython.org/courselib/static/thinkcspy/Files/files.html>`_ 
-* `lists <http://interactivepython.org/courselib/static/thinkcspy/Lists/lists.html>`_
+  <http://interactivepython.org/runestone/static/thinkcspy/Strings/strings.html>`_
+* `Files <http://interactivepython.org/runestone/static/thinkcspy/Files/files.html>`_ 
+* `lists <http://interactivepython.org/runestone/static/thinkcspy/Lists/lists.html>`_

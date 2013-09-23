@@ -5042,8 +5042,8 @@ our own computer.
     </pre>
 
 
-The first step we want to take is to take the `file <http://interactivepython.org/courselib/static/thinkcspy/Files/files.html>`_ of words and create a `list
-<http://interactivepython.org/courselib/static/thinkcspy/Lists/lists.html>`_.
+The first step we want to take is to take the `file <http://interactivepython.org/runestone/static/thinkcspy/Files/files.html>`_ of words and create a `list
+<http://interactivepython.org/runestone/static/thinkcspy/Lists/lists.html>`_.
 
 .. activecode:: read_file_1
 
@@ -5150,15 +5150,15 @@ start on the next post:
 Summary of Background Reading
 -----------------------------
 
-* `The for statement <http://interactivepython.org/courselib/static/thinkcspy/PythonTurtle/helloturtle.html#the-for-loop>`_
+* `The for statement <http://interactivepython.org/runestone/static/thinkcspy/PythonTurtle/helloturtle.html#the-for-loop>`_
 * `The accumulator pattern
-  <http://interactivepython.org/courselib/static/thinkcspy/SimplePythonData/simpledata.html#updating-variables>`_
+  <http://interactivepython.org/runestone/static/thinkcspy/SimplePythonData/simpledata.html#updating-variables>`_
 * `Generating random numbers
-  <http://interactivepython.org/courselib/static/thinkcspy/PythonModules/modules.html#the-random-module>`_
+  <http://interactivepython.org/runestone/static/thinkcspy/PythonModules/modules.html#the-random-module>`_
 * `Strings
-  <http://interactivepython.org/courselib/static/thinkcspy/Strings/strings.html>`_
-* `Files <http://interactivepython.org/courselib/static/thinkcspy/Files/files.html>`_ 
-* `lists <http://interactivepython.org/courselib/static/thinkcspy/Lists/lists.html>`_
+  <http://interactivepython.org/runestone/static/thinkcspy/Strings/strings.html>`_
+* `Files <http://interactivepython.org/runestone/static/thinkcspy/Files/files.html>`_ 
+* `lists <http://interactivepython.org/runestone/static/thinkcspy/Lists/lists.html>`_
 
 
 

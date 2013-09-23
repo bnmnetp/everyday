@@ -13,8 +13,8 @@ and will give learners motivation to dig into the details of the solutions.  I
 will provide links to the relevant Python programming constructs and data types in
 either of the two interactive books (`How to think like a computer scientist:
 Interactive Edition
-<http://interactivepython.org/courselib/static/thinkcspy/index.html>`_ , or
-`Problem Solving with Algorithms and Data Structures using Python <http://interactivepython.org/courselib/static/pythonds/index.html>`_) This will let me
+<http://interactivepython.org/runestone/static/thinkcspy/index.html>`_ , or
+`Problem Solving with Algorithms and Data Structures using Python <http://interactivepython.org/runestone/static/pythonds/index.html>`_) This will let me
 focus on the problems, and not the minutia of the language.  Lets face it, reading
 about all the different possible string methods is not that exciting, but seeing
 them in action, and then wondering about what else you might be able to do with
