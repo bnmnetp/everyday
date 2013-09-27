@@ -107,10 +107,10 @@ probability that two people share the same birthday.
    import random
    classSize = 23
    numTrials = 1000
-   birthdayList = []
    dupeCount = 0
 
    for trial in range(numTrials):
+       birthdayList = []
        for i in range(classSize):
            newBDay = random.randrange(365)
            birthdayList.append(newBDay)
@@ -130,8 +130,8 @@ probability that two people share the same birthday.
 Practice
 ~~~~~~~~
 
-#. Try running this program for different class sizes to see what kind of results you get.
-How large would the class need to be in order for the probability to exceed 0.9 ?
+#. Try running this program for different class sizes to see what kind of results you
+get.  How large would the class need to be in order for the probability to exceed 0.9 ?
 
 #. Try the program above using a larger number of trials and a smaller number of trials
 Run it several each way.  What do you notice about the consistency of the answers as
