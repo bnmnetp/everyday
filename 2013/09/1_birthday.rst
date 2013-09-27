@@ -131,14 +131,15 @@ Practice
 ~~~~~~~~
 
 #. Try running this program for different class sizes to see what kind of results you
-get.  How large would the class need to be in order for the probability to exceed 0.9 ?
+   get.  How large would the class need to be in order for the probability to exceed 0.9 ?
 
 #. Try the program above using a larger number of trials and a smaller number of trials
-Run it several each way.  What do you notice about the consistency of the answers as
-you increase the number of trials?
+   Run it several each way.  What do you notice about the consistency of the answers as
+   you increase the number of trials?
 
 #. Modify the program above to print out a table of class size and probability.  You
-will need to add yet another for loop around the ``for trial in range(numTrials)`` loop.
+   will need to add yet another for loop around the ``for trial in range(numTrials)``
+   loop.
 
 
 Counting Birthdays using Indexing
@@ -292,6 +293,6 @@ Practice
 #. Modify the code above to print out a table of probabilities.
 
 #. Modify the code above to compute the probabilities using either of the first two
-methods, along with the last method, and compare the results.  How close does our
-Monte-carlo simulation come to the value using probability theory?
+   methods, along with the last method, and compare the results.  How close does our
+   Monte-carlo simulation come to the value using probability theory?
 
