@@ -25,7 +25,8 @@ Contents:
    2013/02/2_swarm.rst
    2013/02/3_school.rst
    2013/03/1_steganography.rst
-   2013/05/1_processing.rst   
+   2013/05/1_processing.rst
+   2013/09/1_birthday.rst
 
 Indices and tables
 ==================

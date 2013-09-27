@@ -39,23 +39,23 @@ so we'll spend a few words talking about our representation for this problem.
 It would be difficult to try to represent the birthdays in normal month/day format,
 so we will use an easier representation.  That is the number of the day of the year.
 If we think of January 1 as day 0 (Yes, we computer scientists insist on starting at 0)
- then December 31 is day 364.  So we can represent each birthday as a single integer
- number.
+then December 31 is day 364.  So we can represent each birthday as a single integer
+number.
 
 The next representation question is how are we going to remember all of these
 birthdays?  The answer is that we will use a Python list.  If you are completely new to
- Python lists, you may want to look at `this chapter <http://interactivepython
- .org/runestone/static/thinkcspy/Lists/lists.html>`_.  In any case we can think of a
- Python list just like any list we might write down for ourselves.  If we were  going
- to make up 23 birthdates and we wanted to remember them, we would write them on a
- sheet of paper, one birthday per line.  A Python list is analogous to our paper list
- but we will refer to each line of our list as an **entry** in a Python list.
+Python lists, you may want to look at `this chapter <http://interactivepython
+.org/runestone/static/thinkcspy/Lists/lists.html>`_.  In any case we can think of a
+Python list just like any list we might write down for ourselves.  If we were  going
+to make up 23 birthdates and we wanted to remember them, we would write them on a
+sheet of paper, one birthday per line.  A Python list is analogous to our paper list
+but we will refer to each line of our list as an **entry** in a Python list.
 
 Counting Birthdays using Count
 ------------------------------
 
- Let us start out simple, and look at how we can use the ``random`` module along with a
- single list method, ``append`` to construct a list of birthdays.  Here is the code:
+Let us start out simple, and look at how we can use the ``random`` module along with a
+single list method, ``append`` to construct a list of birthdays.  Here is the code:
 
 .. activecode:: bday_1
 
