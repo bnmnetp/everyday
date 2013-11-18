@@ -107,7 +107,7 @@ In keeping with the simple example from above lets write a function that can tak
 
 Now lets suppose we have a news article that reads as follows:
 
->  Senator johnson was caught stealing a smartphone on election night.  witnesses say that he allegedly took the smartphone from a kindly old lady while she was washing her electric car. republican and democrat congressional leaders have vowed to hold hearings.  Senator johnson could not be reached for comment.
+    Senator johnson was caught stealing a smartphone on election night.  witnesses say that he allegedly took the smartphone from a kindly old lady while she was washing her electric car. republican and democrat congressional leaders have vowed to hold hearings.  Senator johnson could not be reached for comment.
 
 .. tabbed:: translate_tabs
 
@@ -138,6 +138,122 @@ Now lets suppose we have a news article that reads as follows:
          def translateNews(article, boringWords, funWords):
              for idx in range(len(boringWords)):
                  article = article.replace(boringWords[idx],funWords[idx])
-            return article
+             return article
       
-      
+
+This parallel construction solution works, in fact, it works quite well for our small
+example, but in larger, real world problems it can be quite slow to search through a list
+to find a particular word.  There is a better way.
+
+This better way involves the Python object known as a `dictionary
+<http://interactivepython.org/runestone/static/thinkcspy/Dictionaries/dictionary.html>`_
+.  Python
+dictionaries
+provide a general purpose way to do mapping.     Just like our parallel lists mapped
+from one word to another a Python dictionary provides us with with that same
+capability, only faster and a little easier than using two lists.   In fact the Python
+dicionary is a general purpose mapper that allows you to associate a **key** with a
+**value**.  A key can be any immutable Python object, and a value can be any Python
+object at all.  Very often a key will be a string.
+
+We can represent that XKCD word map we've been using a Python dictionary,
+and some familiar indexing notation.
+
+.. activecode:: dict_map1
+
+   wordMap = {}
+   wordMap['witnesses'] = 'dudes I know'
+   wordMap['allegedly'] = 'kinda probably'
+
+   print(wordMap['witnesses'])
+
+
+The string inside the square brackets is the key, and the string on the right hand side
+of the assignment statement is the value.  Notice that in the final line we can look
+up a key and get its value to print by just using the square bracket notation.  There
+is also a dictionary method you can use called ``get``.   These two things are the
+same:  ``wordMap['witnesses']``  and  ``wordMap.get('witnesses')``  Using one or the
+other is largely a matter of personal taste.  I prefer the square brackets since they
+are consistent with the notation used to index into strings or lists.
+
+
+Since we already have two lists with all
+the values typed in, we don't need to retype the entire dictionary.  Lets create a
+dictionary from our two initial lists as follows:
+
+
+.. activecode:: dict_map2
+
+    boring_news  =  ['witnesses',
+                     'allegedely',
+                     'new study',
+                     'rebuilt',
+                     'space',
+                     'google glass',
+                     'smartphone',
+                     'electric',
+                     'senator',
+                     'speaker',
+                     'car',
+                     'election',
+                     'congressional leaders',
+                     'homeland security',
+                     'could not be reached for comment',
+                     'republican',
+                     'democrat']
+
+    xkcd = ['dudes I know',
+            'kinda probably',
+            'tumblr post',
+            'avenge',
+            'spaace',
+            'virtual boy',
+            'pokedex',
+            'atomic',
+            'elf-lord',
+            'elf-lord',
+            'cat',
+            'eating contest',
+            'river spirits',
+            'homestar runner',
+            'is guilty and everyone knows it',
+            'orc',
+            'hobbit']
+
+    wordMap = {}
+    for idx in range(len(boring_news)):
+        key = boring_news[idx]
+        value = xkcd[idx]
+        wordMap[key] = value
+
+
+
+Now using the newly created dictionary see if you can re-write the program to translate
+the entire news article.  Just add it to the bottom of the activecode box above.  When
+you have tried it on your own, then click the show button below to reveal the solution
+and a few comments.
+
+
+.. reveal:: myreveal
+
+   .. activecode:: newtrans
+
+      def translateNews(article, translationDict):
+          for key in translationDict:
+              article = article.replace(key,translationDict[key])
+          return article
+
+
+   For purposes of illustration lets look at another way to write this same function:
+
+   ::
+
+      def translateNews(article, translationDict):
+          for key,value in translationDict.items():
+              article = article.replace(key,value)
+          return article
+
+
+If this is your first time using Python dictionaries I suggest you take a few minutes
+to read through the chapter on dictionaries `here <http://interactivepython
+.org/runestone/thinkcspy/Dictionaries/dictionaries.html>`_.

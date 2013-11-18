@@ -25,7 +25,8 @@ sys.path.insert(0, os.path.abspath('../modules/'))
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.mathjax', 'sphinx.ext.ifconfig', 'luther.sphinx.codelens','luther.sphinx.activecode', 'luther.sphinx.assess', 'luther.sphinx.animation','luther.sphinx.meta','gatech.parsons']
+extensions = ['sphinx.ext.mathjax', 'sphinx.ext.ifconfig', 'luther.sphinx.codelens','luther.sphinx.activecode', 'luther.sphinx.assess', 'luther.sphinx.animation','luther.sphinx.meta','gatech.parsons',
+'luther.sphinx.tabbedStuff', 'luther.sphinx.reveal']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['../source/_templates','_templates']

@@ -27,6 +27,7 @@ Contents:
    2013/03/1_steganography.rst
    2013/05/1_processing.rst
    2013/09/1_birthday.rst
+   2013/11/1_news.rst
 
 Indices and tables
 ==================
