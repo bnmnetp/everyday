@@ -257,3 +257,7 @@ and a few comments.
 If this is your first time using Python dictionaries I suggest you take a few minutes
 to read through the chapter on dictionaries `here <http://interactivepython
 .org/runestone/thinkcspy/Dictionaries/dictionaries.html>`_.
+
+
+In my next post we'll look at a program that can automatically retrieve a story from
+the web and translate the article for you.
