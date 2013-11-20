@@ -134,12 +134,55 @@ Now lets suppose we have a news article that reads as follows:
       So, the solution to our problem can be stated as follows:  For each word in ``boring_news`` replace try to replace the ``boring_news`` string in the news article with the ``xkcd`` string.
       
       .. activecode:: trans_soln1
-      
+
+         boring_news  =  ['witnesses',
+                          'allegedely',
+                          'new study',
+                          'rebuilt',
+                          'space',
+                          'google glass',
+                          'smartphone',
+                          'electric',
+                          'senator',
+                          'speaker',
+                          'car',
+                          'election',
+                          'congressional leaders',
+                          'homeland security',
+                          'could not be reached for comment',
+                          'republican',
+                          'democrat']
+
+         xkcd = ['dudes I know',
+                 'kinda probably',
+                 'tumblr post',
+                 'avenge',
+                 'spaace',
+                 'virtual boy',
+                 'pokedex',
+                 'atomic',
+                 'elf-lord',
+                 'elf-lord',
+                 'cat',
+                 'eating contest',
+                 'river spirits',
+                 'homestar runner',
+                 'is guilty and everyone knows it',
+                 'orc',
+                 'hobbit']
+
+         article = '''Senator johnson was caught stealing a smartphone on election
+         night.  witnesses say that he allegedly took the smartphone from a kindly old
+         lady while she was washing her electric car. republican and democrat
+         congressional leaders have vowed to hold hearings.  Senator johnson could not be reached for comment.'''
+
          def translateNews(article, boringWords, funWords):
+             article = article.lower()
              for idx in range(len(boringWords)):
                  article = article.replace(boringWords[idx],funWords[idx])
              return article
-      
+
+         print(translateNews(article,boring_news,xkcd))
 
 This parallel construction solution works, in fact, it works quite well for our small
 example, but in larger, real world problems it can be quite slow to search through a list
