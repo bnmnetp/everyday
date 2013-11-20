@@ -5,13 +5,23 @@ Once again I find myself inspired by an XKCD cartoon:
 
 .. image:: http://imgs.xkcd.com/comics/substitutions.png
 
-My goal for class today was to introduce Python Dictionaries.  I've often introduced dictionaries in the past by writing an english to pirate translator.   This just seemed like too much fun to pass up.
+My goal for class today was to introduce Python Dictionaries.  I've often introduced
+dictionaries in the past by writing an english to pirate translator.   This just seemed
+like too much fun to pass up.
 
-We are going to begin by looking at two ways we can translate a news article, but the key idea is the same either way.  The key is in the use of a **Map**.  A map allows us to associate one object with another.  Just like the example above, where the string "senator" is associated with the string "elf-lord".
+We are going to begin by looking at two ways we can translate a news article,
+but the key idea is the same either way.  The key is in the use of a **Map**.  A map
+allows us to associate one object with another.  Just like the example above,
+where the string "senator" is associated with the string "elf-lord".
 
-The outline for our translator is as follows:  For each of the strings on the left side of the arrow, we want to search the article, and replace those strings with the strings on the right hand side of the arrow.
+The outline for our translator is as follows:  For each of the strings on the left side
+of the arrow, we want to search the article, and replace those strings with the strings
+on the right hand side of the arrow.
 
-So, the question is how do we represent a map in Python?  Here is one example of how we might do it using lists, and the idea of "parallel construction."  Lets make a list called ``boring_news`` to keep track of the words on the left, and another list called ``xkcd`` to keep track of the words on the right.
+So, the question is how do we represent a map in Python?  Here is one example of how we
+might do it using lists, and the idea of "parallel construction."  Lets make a list
+called ``boring_news`` to keep track of the words on the left,
+and another list called ``xkcd`` to keep track of the words on the right.
 
 ::
 
@@ -219,6 +229,16 @@ same:  ``wordMap['witnesses']``  and  ``wordMap.get('witnesses')``  Using one or
 other is largely a matter of personal taste.  I prefer the square brackets since they
 are consistent with the notation used to index into strings or lists.
 
+We can also create a dictionary using a dictionary literal.
+
+.. activecode:: dict_lit1
+
+   wordMap = {'witnesses': 'dudes I know', 'allegedly': 'kinda probably'}
+
+   print(wordMap['witnesses'])
+
+When creating a literal dictionary the key and value are separated by a colon (:) and
+the various dictionary entries are separated by commas.  Either method is acceptable.
 
 Since we already have two lists with all
 the values typed in, we don't need to retype the entire dictionary.  Lets create a
@@ -271,6 +291,18 @@ dictionary from our two initial lists as follows:
 
 
 
+In Python 3, the for loop in the previous example can be replaced by a **dictionary
+comprehension**.  If you know about list comprehensions then this will make sense,
+if you don't know about list comprehensions then check out `this section
+<http://interactivepython.org/runestone/static/thinkcspy/Lists/lists
+.html#list-comprehensions>`_.
+
+::
+
+    wordMap = { boring_news[i] : xkcd[i] for i in range(len(boring_news)) }
+
+
+
 Now using the newly created dictionary see if you can re-write the program to translate
 the entire news article.  Just add it to the bottom of the activecode box above.  When
 you have tried it on your own, then click the show button below to reveal the solution
@@ -287,7 +319,13 @@ and a few comments.
           return article
 
 
-   For purposes of illustration lets look at another way to write this same function:
+   For purposes of illustration lets look at another way to write this same function.
+   In this case we will iterate over the key,value pairs directly using the items
+   method of a dictionary.  Calling items on our translationDict for this problem would
+   return a list that looked like this: ``[ ('witnesses', 'dudes i know'), ('allegedly', 'kinda probly'), ... ]``
+   The pairs inside the parenthesis are called `tuples <http://interactivepython.org/runestone/static/thinkcspy/Lists/lists.html#tuples-and-mutability>`_.
+   If you haven't read about tuples before, don't worry too much,
+   they are a lot like lists, except that --like strings -- tuples are immutable.
 
    ::
 
