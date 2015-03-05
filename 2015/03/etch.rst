@@ -67,7 +67,8 @@ Closures
    def main():
        t = turtle.Turtle()
        wn = turtle.Screen()
-
+       wn.setup(300,300)
+       
        def gotopoint(x, y):
            t.goto(x,y)
    
@@ -94,6 +95,7 @@ If you don't care anymore, or if you haven't been exposed to object oriented pro
        def __init__(self):
            self.t = turtle.Turtle()
            self.wn = turtle.Screen()
+           self.wn.setup(300,300)
            self.wn.onclick(self.t.goto)
     
        def main(self):
