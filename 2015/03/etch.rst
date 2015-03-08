@@ -125,11 +125,11 @@ The Etch-A-Sketch was introduced by the Ohio Art Company in 1960.  As you can se
 
 Your assignment is to write a program that mimics the etch-a-sketch.  You will need functions to handle the following events:
 
-* go forward 10
-* go backward 10
-* turn right 10
-* turn left 10
-* clear the screen.
+* go to the left by five pixels
+* go to the right by five pixels
+* go up five pixels
+* go down five pixels
+* clear the screen (use ``reset``).
 
 If you want to get fancy you can add some additional key events to change colors.  I will post the solution in a day or two.
 

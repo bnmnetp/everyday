@@ -29,6 +29,7 @@ Contents:
    2013/09/1_birthday.rst
    2013/11/1_news.rst
    2015/03/etch.rst
+   2015/03/etchfinal.rst   
 
 Indices and tables
 ==================
