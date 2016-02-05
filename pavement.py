@@ -8,59 +8,32 @@ from sphinxcontrib import paverutils
 
 sys.path.append(os.getcwd())
 
-######## CHANGE THIS ##########
-project_name = "everyday"
-###############################
-
-master_url = 'http://127.0.0.1:8000'
+home_dir = os.getcwd()
+master_url = 'http://interactivepython.org'
 master_app = 'runestone'
+serving_dir = "./build/everyday"
+dest = "../../static"
 
 options(
     sphinx = Bunch(docroot=".",),
 
     build = Bunch(
-        builddir="../static/"+project_name,
-        sourcedir=".",
-        outdir="../static/"+project_name,
+        builddir="./build/everyday",
+        sourcedir="_sources",
+        outdir="./build/everyday",
         confdir=".",
-        template_args={'course_id':project_name,
+        project_name = "everyday",
+        template_args={'course_id': 'everyday',
                        'login_required':'false',
                        'appname':master_app,
-                       'loglevel':10,
-                       'course_url':master_url }
+                       'loglevel': 10,
+                       'course_url':master_url,
+                       'use_services': 'true',
+                       'python3': 'true',
+                       'dburl': 'postgresql://user:password@localhost/runestone'
+                        }
     )
 )
 
-if project_name == "<project_name>":
-  print "Please edit pavement.py and give your project a name"
-  exit()
-
-@task
-@cmdopts([
-    ('all','a','rebuild everything'),
-    ('outputdir=', 'o', 'output static files here'),
-    ('masterurl=', 'u', 'override the default master url'),
-    ('masterapp=', 'p', 'override the default master app')
-])
-def build(options):
-    if 'all' in options.build:
-      options['force_all'] = True
-      options['freshenv'] = True
-
-    bi = open("../build_info",'r').read()
-    bi = bi.split('-')[0]
-    options.build.template_args["build_info"] = bi
-    
-
-    if 'outputdir' in options.build:
-        options.build.outdir = options.build.outputdir
-
-    if 'masterurl' in options.build:
-        options.build.template_args['course_url'] = options.build.masterurl
-
-    if 'masterapp' in options.build:
-        options.build.template_args['appname'] = options.build.masterapp
-
-    print 'Building into ', options.build.outdir    
-    paverutils.run_sphinx(options,'build')
+from runestone import build  # build is called implicitly by the paver driver.
 
