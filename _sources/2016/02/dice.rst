@@ -205,14 +205,58 @@ Now lets round out this section by making a little Dice Poker game.  For that we
         print(c)
 
 
-At this point things are looking pretty good.  However, in a game of poker or yahtzee or whatever you usually only roll all of the dice on the first roll of your turn.  After the turn you probably want to select a few dice to keep as they are and you want to roll some of them again.  There are two different approaches to the idea of rolling only some of the dice.
+At this point things are looking pretty good.  However, in a game of poker or yahtzee or whatever you usually only roll all of the dice on the first roll of your turn.  After the turn you probably want to select a few dice to keep as they are and you want to roll some of them again.  There are several different approaches to the idea of rolling only some of the dice.
 
 1.  Add methods to the Cup so that a die can be removed from the cup.  You will also want to add dice back to the cup later so you would need a method for that too.
 2.  Add a method to the Cup so that you can mark some dice to be "unrollable" that is the dice stay in the cup, but shake doesn't roll them.
 3.  Add a method to the die to make a die 'frozen' so that when the roll method is called on the die, the value does not change if the die is frozen.
+4.  Add a roll method to the Cup class that accepts a list (or a variable number of parameters!!) and only rolls the dice dice you have specified.
 
-Any of these methods would work fine.
-But to make this a real game we would want to allow for some dice to be kept and some to be re-rolled
+All of these methods have good educational value.  The easiest may be number 4.
+
+.. activecode:: cup1
+    :language: python
+
+    import random
+
+    random.seed(42)
+
+    class MSDie:
+        def __init__(self, values):
+            self.possible_values = values
+            self.roll()
+
+        def roll(self):
+            self.__value = random.choice(self.possible_values)
+            return self.__value
+
+        def get_value(self):
+            return self.__value
+
+        def __str__(self):
+            return str(self.__value)
+
+    class Cup:
+        def __init__(self,numDice,numSides=6):
+            self.dieList = [MSDie(range(1,numSides+1)) for i in range(numDice)]
+
+        def shake(self):
+            for d in self.dieList:
+                d.roll()
+
+        def roll(self,*args):
+            for i in args:
+                if i > 0 and i <= len(args):
+                    self.dieList[i-1].roll()
+
+        def __str__(self):
+            return str([str(d) for d in self.dieList])
+
+
+    c = Cup(5,6)
+    for i in range(3):
+        c.shake()
+        print(c)
 
 
 * If I want to make a dice game it might be nice to be able to compare two dice objects without having to get their value.
