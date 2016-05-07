@@ -29,7 +29,8 @@ Contents:
    2013/09/1_birthday.rst
    2013/11/1_news.rst
    2015/03/etch.rst
-   2015/03/etchfinal.rst   
+   2015/03/etchfinal.rst
+   2016/02/dice.rst
 
 Indices and tables
 ==================

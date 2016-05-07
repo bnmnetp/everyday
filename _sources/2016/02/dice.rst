@@ -259,4 +259,4 @@ All of these methods have good educational value.  The easiest may be number 4.
         print(c)
 
 
-* If I want to make a dice game it might be nice to be able to compare two dice objects without having to get their value.
+* If I want to make a dice game it might be nice to be able to compare two dice objects without having to get their value.  Add an ``__eq__``, ``__lt__``, and ``__gt__`` method to the MSDie class.
