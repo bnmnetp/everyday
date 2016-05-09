@@ -1,3 +1,5 @@
+.. description:: A look at the itertools groupby function, makes a common iteration pattern easy.
+
 Iterating over Groups of Things
 ===============================
 
@@ -145,6 +147,7 @@ Still confused?  Here is another example:
 .. activecode:: simplegrouptuple
    :language: python3
 
+   from itertools import groupby
    tlist = [('a',1), ('a',2), ('a',3), ('b',1), ('b',2), ('c',1), ('c',2), ('c',3), ('d',1) ]
 
    groups = groupby(tlist, key=lambda x: x[0])
@@ -153,7 +156,7 @@ Still confused?  Here is another example:
     for thing in group:
         print("    {}".format(thing))
 
-Notice that the thign printed in the loop on line 6 includes both elements of the tuple, the key and the value.  Change the print statement so that it only prints out the value using ``format(thing[1])`` to get a little nicer output.
+Notice that the thing printed in the loop on line 6 includes both elements of the tuple, the key and the value.  Change the print statement so that it only prints out the value using ``format(thing[1])`` to get a little nicer output.
 
 But I want to group by category
 -------------------------------
@@ -185,7 +188,7 @@ This might seem right, but you would get the following output::
     Toys 923.1 923.1
     Cars 675.2 675.2
 
-Definitely not what you were looking for.  The important thing to remember is that sequence of items must be sorted by the key you want to group by!  So in order to make the example above work right we need to sort ``mylist`` by the second column of values, not the first.  We can do that easily using the ``sorted`` function.
+That is definitely not what you were looking for!  The important thing to remember is that sequence of items must be sorted by the key you want to group by!  So in order to make the example above work right we need to sort ``mylist`` by the second column of values, not the first.  We can do that easily using the ``sorted`` function.
 
 .. code-block:: python
 
@@ -193,4 +196,6 @@ Definitely not what you were looking for.  The important thing to remember is th
         mylist = sorted([(line.strip().split('|')) for line in f],
                         key=lambda x: x[1])
 
-Here again we employ the lambda function to provide the sort key for how we want my list to be sorted.
+Here again we employ the lambda function to provide the sort key for how we want my list to be sorted.  With this small change we can get the correct report, organized by category.
+
+Once you understand how to use it, the groupby operator is a powerful new tool for your programming toolbox.  It is cleaner, easier to understand and less error prone than the old method.
