@@ -119,7 +119,7 @@ However, I've recently been exploring the itertools package. which offers us a c
 
    from itertools import groupby
 
-   with open('salesdata','r') as f
+   with open('salesdata','r') as f:
        mylist = [(line.strip().split('|')) for line  in f]
 
    groups = groupby(mylist, key=lambda x: x[0])
@@ -163,30 +163,24 @@ But I want to group by category
 
 Now that we can group, you may be thinking but I want to group by the category not the month.  And you might think, hey, this is easy.  I'll just change that nifty little lambda to use the category column as the key and everything will be cool.
 
-.. code-block:: python
+.. activecode:: groupbycat
+   :language: python3
+   :datafile: salesdata
+
+   from itertools import groupby
 
    with open('salesdata', 'r') as f:
        mylist = [(line.strip().split('|')) for line in f]
 
-   print(mylist)
+   print("\n".join([str(x) for x in mylist]))
    groups = groupby(mylist, key=lambda x: x[1])
-   for month, group in groups:
+   for group_key, group in groups:
        saleslist = [float(x[2]) for x in group]
        total = sum(saleslist)
        average = total / len(saleslist)
-       print(month, total, average)
+       print(group_key, total, average)
 
-This might seem right, but you would get the following output::
-
-    Toys 200.3 200.3
-    Games 125.9 125.9
-    Cars 361.4 361.4
-    Games 450.9 450.9
-    Cars 229.25 229.25
-    Toys 22.5 22.5
-    Games 14.73 14.73
-    Toys 923.1 923.1
-    Cars 675.2 675.2
+This might seem right, but if you run it you will notice the output is totally wrong and useless.
 
 That is definitely not what you were looking for!  The important thing to remember is that sequence of items must be sorted by the key you want to group by!  So in order to make the example above work right we need to sort ``mylist`` by the second column of values, not the first.  We can do that easily using the ``sorted`` function.
 
@@ -196,6 +190,6 @@ That is definitely not what you were looking for!  The important thing to rememb
         mylist = sorted([(line.strip().split('|')) for line in f],
                         key=lambda x: x[1])
 
-Here again we employ the lambda function to provide the sort key for how we want my list to be sorted.  With this small change we can get the correct report, organized by category.
+Here again we employ the lambda function to provide the sort key for how we want my list to be sorted.  With this small change we can get the correct report, organized by category.  Modify the previous code to use the call to sorted and you will see that things are grouping and calculating correctly.
 
 Once you understand how to use it, the groupby operator is a powerful new tool for your programming toolbox.  It is cleaner, easier to understand and less error prone than the old method.

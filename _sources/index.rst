@@ -31,6 +31,7 @@ Contents:
    2015/03/etch.rst
    2015/03/etchfinal.rst
    2016/02/dice.rst
+   2016/05/groupby.rst
 
 Indices and tables
 ==================
