@@ -17,6 +17,7 @@ The big question in event driven programming is "how do we connect an event with
 For our example we will write a callback function called ``gotopoint`` which takes two parameters: the x and y location of where the mouse was clicked.  We will pass this function as a parameter to the ``onclick`` method provided by the turtle module.  Now the turtle module knows that whenever we click the mouse it must call our ``gotopoint`` function.  Furthermore, when it calls our function it will pass it the two parameters required to provide us with the x and y location of the mouse.  Connecting a function to an event like this is referred to as **binding** a function to an event.
 
 .. activecode:: callbackdemo
+   :nocodelens:
 
    import turtle
 
@@ -25,10 +26,10 @@ For our example we will write a callback function called ``gotopoint`` which tak
    wn = turtle.Screen()
    wn.setup(300,300)
 
-   # define the callback   
+   # define the callback
    def gotopoint(x, y):
        t.goto(x,y)
-    
+
    # connect the callback with the click event and wait
    wn.onclick(gotopoint)
    wn.listen()
@@ -44,10 +45,10 @@ The turtle graphics module understands three main events
 .. admonition:: Try it
 
    Modify the program above so that it has a callback function connected to the 'q' key.  The function that should be called is You may define your own function that takes no parameters and calls ``wn.bye()`` or you may bind ``wn.bye`` directly.
-   
+
    Try modifying the above example to use ontimer.  Have your callback function pick a random point in the window and draw a line to it every 500 milliseconds.
 
-   
+
 Programming Style Diversion
 ---------------------------
 
@@ -61,6 +62,7 @@ Closures
 ^^^^^^^^
 
 .. activecode:: callbacks2
+   :nocodelens:
 
    import turtle
 
@@ -68,10 +70,10 @@ Closures
        t = turtle.Turtle()
        wn = turtle.Screen()
        wn.setup(300,300)
-       
+
        def gotopoint(x, y):
            t.goto(x,y)
-   
+
        wn.onclick(gotopoint)
        turtle.mainloop()
 
@@ -88,6 +90,7 @@ Object Oriented
 If you don't care anymore, or if you haven't been exposed to object oriented programming yet, you can skip this next solution as it is likely to confuse things for you more than it will help.  But if you have seen some object oriented programming, then our global variable problem can easily be solved by encapsulating everything we need in a class.
 
 .. activecode:: callbacks3
+   :nocodelens:
 
    import turtle
 
@@ -97,13 +100,13 @@ If you don't care anymore, or if you haven't been exposed to object oriented pro
            self.wn = turtle.Screen()
            self.wn.setup(300,300)
            self.wn.onclick(self.t.goto)
-    
+
        def main(self):
            turtle.mainloop()
 
    Clicky().main()
-   
-If you have written your class in Python before this solution should seem pretty straightforward.  We have instance variables for the turtle and the Screen objects rather than using global variables.  
+
+If you have written your class in Python before this solution should seem pretty straightforward.  We have instance variables for the turtle and the Screen objects rather than using global variables.
 
 But, what happened to our ``gotopoint`` function?  We could easily have written the following:
 
@@ -111,7 +114,7 @@ But, what happened to our ``gotopoint`` function?  We could easily have written 
 
    def gotopoint(self, x, y):
        self.t.goto(x,y)
-       
+
 In our ``__init__`` method we would bind the gotopoint method by calling ``self.wn.onclick(self.gotopoint)``  But why bother?  The onclick method just needs a reference to a function that takes two parameters: ``x`` and ``y``.  We already have a function that does that, and it is the ``goto`` method of the turtle.  Now that you know this you can even simplify the original example by eliminating ``gotopoint`` and passing ``t.goto`` to the ``onclick`` function.
 
 
